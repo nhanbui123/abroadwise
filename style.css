@@ -93,7 +93,7 @@ a.btn {
 }
 
 a.btn i {
-  font-size: 24px
+  font-size: 24px;
 }
 
 
@@ -300,10 +300,21 @@ h2 {
 }
 
 @keyframes floatHover {
-  0%   { transform: translateY(0); }
-  50%  { transform: translateY(-20px); }
-  70%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  70% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /****** END ********/
@@ -484,6 +495,7 @@ footer button.btn:hover {
 .bg-footer {
   background-color: #1B1F5C;
 }
+
 /********************* ABOUTS *****************/
 
 .values h1 {
@@ -688,11 +700,13 @@ p.chucvu {
 
 /************* SERVICES *******************/
 
-.services .container,.apply-support .container {
+.services .container,
+.apply-support .container {
   max-width: 978px;
   margin: 0 auto;
   padding: 0;
 }
+
 .services h2 {
   font-family: "title-medium";
   font-size: 48px;
@@ -702,20 +716,25 @@ p.chucvu {
   font-family: "title";
   font-size: 40px;
 }
+
 .services h4 {
   font-family: "title-italic";
 }
-.services-banner img,.apply-support img {
 
-height: 235px;
+.services-banner img,
+.apply-support img {
 
-object-fit: cover;
+  height: 235px;
 
-width: 100%;
+  object-fit: cover;
 
-border-radius: 16px;
+  width: 100%;
+
+  border-radius: 16px;
 }
-.services-banner-content h4,.apply-support h4 {
+
+.services-banner-content h4,
+.apply-support h4 {
   font-family: "text-bold";
 }
 
@@ -724,38 +743,40 @@ border-radius: 16px;
   border-radius: 16px;
 }
 
-.service-banner-content-bottom h4{
+.service-banner-content-bottom h4 {
   font-family: "title-italic";
- }
+}
 
- .apply-support h3 {
+.apply-support h3 {
   font-family: "title";
- }
+}
 
- .dacdiem {
+.dacdiem {
   background: var(--color-pink);
   border-radius: 16px;
- }
+}
 
- .dacdiem2 {
+.dacdiem2 {
   background: var(--color-about-team-active);
- }
+}
 
- .dacdiem h4, .dacdiem2 h4 {
+.dacdiem h4,
+.dacdiem2 h4 {
   font-family: "title-italic";
- }
+}
 
- .not-found-section {
+.not-found-section {
   background-image: url(image/banner-bottom-service.png);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 88px 0;
- }
+}
 
- .not-found-section h2 {
+.not-found-section h2 {
   font-family: "title";
   font-size: 40px;
- }
+}
+
 /************* END *******************/
 
 
@@ -767,17 +788,17 @@ border-radius: 16px;
 
 .contact-section h4 {
   font-family: "title-italic";
- }
+}
 
- .contacts {
+.contacts {
   background-color: var(--color-text-primary);
   border-radius: 16px;
   position: relative;
- }
+}
 
 .contacts h3 {
-    font-family: "title";
-    font-size: 32px;
+  font-family: "title";
+  font-size: 32px;
 }
 
 .contacts p {
@@ -785,7 +806,7 @@ border-radius: 16px;
 }
 
 .contacts i {
-    margin-right: 12px;
+  margin-right: 12px;
 }
 
 .contact-icon {
@@ -793,6 +814,14 @@ border-radius: 16px;
   bottom: 15px;
   right: 15px;
 }
+
 /************* END *******************/
 
 /*************RESPONSIVE *******************/
+
+@media(max-width:1280px) {
+  .team-member img {
+    width: 207px;
+
+  }
+}
