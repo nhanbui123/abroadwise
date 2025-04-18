@@ -824,4 +824,8 @@ p.chucvu {
     width: 207px;
 
   }
+
+  .trips .container {
+    padding: 3rem;
+  }
 }
