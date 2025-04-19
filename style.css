@@ -386,10 +386,11 @@ h2 {
 }
 
 
-.student-infor .student-img img{
+.student-infor .student-img img {
   height: 100%;
   object-fit: cover;
 }
+
 #testimonialCarousel {
   max-width: 83%;
   margin: 0 auto;
@@ -595,10 +596,10 @@ footer button.btn:hover {
   border-radius: 24px;
   padding-bottom: 0 !important;
   background: var(--color-background);
-  transition: all .2s;
+  transition: all .1s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -610,18 +611,23 @@ footer button.btn:hover {
   width: 44%;
   background: var(--color-about-team-active);
   display: flex;
-  transition: all .2s;
+  transition: all .1s;
   flex-direction: row;
-  align-items: center;
-  padding-top: 0 !important;
+  align-items: flex-end;
+}
+
+.about-team.active .about-team-content {
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .about-team-content {
-  width: 65%;
+  width: 60%;
 }
 
 .about-team.active img {
-  width: 38%;
+  width: 40%;
   object-fit: cover;
 }
 
@@ -634,12 +640,11 @@ footer button.btn:hover {
 }
 
 .about-team.active img {
-  height: 316px;
+  height: 280px;
 }
 
 .about-team img {
-  height: 160px;
-  width: 74%;
+  height: 195px;
   object-fit: cover;
   object-position: top;
 }
@@ -692,24 +697,24 @@ p.chucvu {
   transition: opacity 0.5s ease, transform 0.5s ease;
   pointer-events: none;
   visibility: hidden;
-  position: absolute;
   padding: 40px;
   justify-content: flex-start;
   gap: 5%;
-  padding-top: 50px;
-  padding-bottom: 0;
   align-items: center;
+  display: none;
 }
 
 .about-team-panel-img {
   width: 35%;
+  height: 350px;
 }
 
 .about-team-panel-img img {
   width: 100%;
   object-fit: cover;
   border-radius: 24px;
-  object-position: center calc(50% - -100px);
+  object-position: top;
+  height: 100%;
 }
 
 .about-team-panel-content {
@@ -723,6 +728,8 @@ p.chucvu {
   transform: translateX(0);
   pointer-events: auto;
   visibility: visible;
+  display: flex;
+  left: 0;
 }
 
 .about-team-panel-content blockquote {
@@ -866,6 +873,8 @@ p.chucvu {
 }
 
 @media(max-width:768px) {
+
+  /************* TRANG CHU *******************/
   .hero-img {
     border: none;
   }
@@ -918,7 +927,7 @@ p.chucvu {
     width: 100%;
   }
 
-  .student-infor .student-img img{
+  .student-infor .student-img img {
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -948,7 +957,96 @@ p.chucvu {
   .student .container {
     margin-bottom: 0;
   }
+
   .footer-menu h4:last-child {
     margin-bottom: 0;
   }
+
+  /************* END *******************/
+
+  /************* ABOUTS *******************/
+  .values h1 {
+    font-size: 32px;
+  }
+
+  .values h4 {
+    font-size: 16px;
+  }
+
+  .value h4 {
+    font-size: 20px;
+  }
+
+  .wrap-about-team {
+    display: block;
+  }
+
+  .about-team.active {
+    width: 100%;
+    padding: 1.5rem !important;
+    justify-content: space-between;
+    padding-right: 0 !important;
+    padding-bottom: 0!important;
+  }
+
+  .about-team-content-des p {
+    font-size: 12px;
+    text-align: left;
+  }
+
+  p.chucvu {
+    text-align: left;
+  }
+
+  .about-team h6 {
+    font-size: 16px;
+    text-align: left;
+  }
+
+  .about-team.active img {
+    height: 196px;
+  }
+
+  .about-team {
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .about-team-panel {
+    flex-direction: column;
+    padding: 1rem;
+    padding-top: 2rem;
+     position: unset;
+  }
+
+  .about-team-panel-img {
+    width: 100%;
+    height: 270px;
+    margin-bottom: 1rem;
+  }
+
+  .about-team-panel-img img {
+    object-position: top;
+
+  }
+
+  .about-team-panel-wrap .container {
+    height: 100%;
+  }
+
+  .about-team-panel-content blockquote {
+    font-size: 20px;
+  }
+
+  .about-team-panel-content {
+    width: 100%;
+  }
+  .about-team.active .about-team-content {
+    padding: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  /************* END *******************/
 }
