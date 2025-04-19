@@ -948,4 +948,7 @@ p.chucvu {
   .student .container {
     margin-bottom: 0;
   }
+  .footer-menu h4:last-child {
+    margin-bottom: 0;
+  }
 }
