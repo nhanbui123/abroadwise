@@ -493,8 +493,10 @@ footer button.btn:hover {
   background-color: var(--primary-color);
 }
 
-.form-control {
+.contact-section .form-control,
+.contact-section .form-select {
   color: var(--color-text-white);
+  border: 1px solid var(--color-text-primary);
 }
 
 .form-control:focus {
@@ -617,9 +619,9 @@ footer button.btn:hover {
 }
 
 .about-team.active .about-team-content {
-    padding-left: 1.5rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 
 .about-team-content {
@@ -836,6 +838,7 @@ p.chucvu {
   background-color: var(--color-text-primary);
   border-radius: 16px;
   position: relative;
+  height: 100%;
 }
 
 .contacts h3 {
@@ -986,7 +989,7 @@ p.chucvu {
     padding: 1.5rem !important;
     justify-content: space-between;
     padding-right: 0 !important;
-    padding-bottom: 0!important;
+    padding-bottom: 0 !important;
   }
 
   .about-team-content-des p {
@@ -1018,7 +1021,7 @@ p.chucvu {
     flex-direction: column;
     padding: 1rem;
     padding-top: 2rem;
-     position: unset;
+    position: unset;
   }
 
   .about-team-panel-img {
@@ -1043,10 +1046,69 @@ p.chucvu {
   .about-team-panel-content {
     width: 100%;
   }
+
   .about-team.active .about-team-content {
     padding: 0;
     padding-bottom: 1.5rem;
   }
 
   /************* END *******************/
+
+  /************* SERVICES *******************/
+  .services h2 {
+    font-size: 32px;
+  }
+
+  .services h4 {
+    font-size: 20px;
+  }
+
+  .services .btn,
+  .apply-support .btn,
+  .not-found-section .btn {
+    font-size: 13px;
+  }
+
+  .not-found-section h2 {
+    font-size: 24px;
+  }
+
+  .not-found-section {
+    padding: 50px 0;
+  }
+
+  .services h3,
+  .apply-support h3 {
+    font-size: 20px;
+  }
+
+  .services-banner-content h4,
+  .apply-support h4 {
+    font-size: 14px;
+  }
+
+  .dacdiem h4,
+  .dacdiem2 h4 {
+    font-family: "title-italic";
+    font-size: 20px;
+  }
+
+  /************* END *******************/
+
+
+  /************* CONTACT *******************/
+
+  .contact-section h2 {
+    font-size: 32px;
+  }
+
+  .contact-section h4 {
+
+    font-size: 20px;
+  }
+
+
+  .contacts {
+    height: 350px;
+  }
 }
