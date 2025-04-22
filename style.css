@@ -99,6 +99,7 @@ a.btn {
   display: inline-flex;
   align-items: center;
   height: 40px;
+  color: var(--color-text-primary);
 }
 
 a.btn i {
