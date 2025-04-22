@@ -99,7 +99,6 @@ a.btn {
   display: inline-flex;
   align-items: center;
   height: 40px;
-  color: var(--color-text-primary);
 }
 
 a.btn i {
@@ -268,6 +267,11 @@ h2 {
 
 .trips h4 {
   font-family: 'title-italic';
+}
+
+
+.trips-card a.btn {
+  color: var(--color-text-primary);
 }
 
 .trips-card img {
@@ -669,6 +673,10 @@ footer button.btn:hover {
 
 .about-team:hover {
   cursor: pointer;
+}
+
+.about-team a:hover, .about-team a:focus {
+  color: var(--color-text-primary);
 }
 
 .about-team.active {
