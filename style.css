@@ -152,7 +152,7 @@ h2 {
 }
 
 .menu-mobile ul {
- padding: 0;
+  padding: 0;
 }
 
 .menu-mobile ul li a {
@@ -164,6 +164,7 @@ h2 {
 .menu-mobile ul li:last-child a {
   color: #fff;
 }
+
 .menu-mobile ul li:last-child a:hover {
   color: var(--color-text-primary);
 }
@@ -287,7 +288,7 @@ h2 {
   overflow: hidden;
   border-radius: 12px;
   /* bo góc nhẹ cho đẹp */
-  
+
   /* màu nền nhẹ nếu ảnh có khoảng trống */
 }
 
@@ -651,16 +652,18 @@ footer button.btn:hover {
 .abouts-teams,
 .about-team-panel-wrap {
   background: var(--color-text-white);
+  width: 100%;
 }
 
 .wrap-about-team {
   display: flex;
-  justify-content: flex-end;
-  gap: 2%;
+  justify-content: space-between;
+  gap: 1.5%;
+  row-gap: 2%;
 }
 
 .about-team {
-  width: 18%;
+  width: 16.5%;
   border-radius: 24px;
   padding-bottom: 0 !important;
   background: var(--color-background);
@@ -669,13 +672,15 @@ footer button.btn:hover {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  margin-bottom: 1.5rem;
 }
 
 .about-team:hover {
   cursor: pointer;
 }
 
-.about-team a:hover, .about-team a:focus {
+.about-team a:hover,
+.about-team a:focus {
   color: var(--color-text-primary);
 }
 
@@ -688,13 +693,18 @@ footer button.btn:hover {
   align-items: flex-end;
 }
 
+
+
+.about-team-content {
+  width: 100%;
+  padding: 1rem;
+}
+
 .about-team.active .about-team-content {
   padding-left: 1.5rem;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.about-team-content {
+  padding-right: 0;
   width: 60%;
 }
 
@@ -716,9 +726,9 @@ footer button.btn:hover {
 }
 
 .about-team img {
-  height: 195px;
+  height: 170px;
   object-fit: cover;
-  object-position: top;
+  object-position: bottom;
 }
 
 
@@ -730,6 +740,7 @@ footer button.btn:hover {
 
 .about-team.active h6 {
   text-align: left;
+  white-space: nowrap;
 }
 
 .about-team-content-des {
@@ -752,13 +763,13 @@ p.chucvu {
 }
 
 .about-team-panel-wrap .container {
-  height: 450px;
   margin-bottom: 72px;
   border-radius: 24px;
   background: var(--color-about-team-active);
   overflow: hidden;
   position: relative;
   overflow: hidden;
+  padding: 0;
 }
 
 .about-team-panel {
@@ -778,7 +789,7 @@ p.chucvu {
 
 .about-team-panel-img {
   width: 35%;
-  height: 350px;
+  height: 390px;
 }
 
 .about-team-panel-img img {
@@ -791,6 +802,7 @@ p.chucvu {
 
 .about-team-panel-content {
   width: 60%;
+  text-align: left;
 }
 
 .about-team-panel-content p {}
@@ -945,7 +957,7 @@ p.chucvu {
   }
 }
 
-@media(max-width:992px){
+@media(max-width:992px) {
 
   /************* TRANG CHU *******************/
   .hero-img {
@@ -954,7 +966,7 @@ p.chucvu {
 
   .hero-img img {
     margin-bottom: 2rem;
-}
+  }
 
   .py-4 {
     padding-top: 2rem !important;
@@ -975,6 +987,7 @@ p.chucvu {
     font-size: 14px;
     margin-bottom: 0;
   }
+
   .trips-card-content {
     display: block;
     min-height: unset;
@@ -1061,20 +1074,34 @@ p.chucvu {
 
   .wrap-about-team {
     display: block;
-  }
-
-  .about-team.active {
-    width: 100%;
-    padding: 1.5rem !important;
-    justify-content: space-between;
-    padding-right: 0 !important;
-    padding-bottom: 0 !important;
+    align-items: center;
   }
 
   .about-team-content-des p {
     font-size: 12px;
     text-align: left;
   }
+
+  .about-team {
+    width: 48.5%;
+    align-items: end;
+    height: 175px;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-team.active {
+
+width: 100%;
+
+justify-content: space-between;
+
+padding-right: 0 !important;
+
+padding-bottom: 0 !important;
+
+min-height: 200px;
+}
 
   p.chucvu {
     text-align: left;
@@ -1087,13 +1114,7 @@ p.chucvu {
 
   .about-team.active img {
     height: 196px;
-  }
-
-  .about-team {
-    width: 100%;
-    flex-direction: row;
-    margin-bottom: 2rem;
-    padding: 0 1.5rem;
+    width: unset;
   }
 
   .about-team-panel {
@@ -1114,10 +1135,6 @@ p.chucvu {
 
   }
 
-  .about-team-panel-wrap .container {
-    height: 100%;
-  }
-
   .about-team-panel-content blockquote {
     font-size: 20px;
   }
@@ -1129,6 +1146,7 @@ p.chucvu {
   .about-team.active .about-team-content {
     padding: 0;
     padding-bottom: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   /************* END *******************/
@@ -1197,8 +1215,45 @@ p.chucvu {
 }
 
 
-@media(max-width:768px){
+@media(max-width:768px) {
   .hero-img img {
     margin-bottom: 0;
-}    
+  }
+
+  .about-team.active {
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+  }
+  .about-team {
+    height: auto;
+    width: 100%;
+    align-items: center;
+    padding-top: .5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .wrap-about-team {
+    row-gap: 1.5%;
+   }
+   .about-team-panel { 
+    padding: 1.5rem;
+   }
+
+   .about-team.active img {
+    height: 172px;
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+}
+
+  .about-team.active .about-team-content {
+    padding: 0;
+    width: 66%;
+    padding-bottom: 1.5rem;
+   }
+
+   .about-team-panel-wrap .container {
+    margin-bottom: 1.5rem;
+   }
 }

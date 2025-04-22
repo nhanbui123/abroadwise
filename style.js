@@ -27,3 +27,26 @@ btnMenu.addEventListener("click", function () {
     // Toggle scroll
     document.body.classList.toggle("no-scroll");
 })
+
+
+if (window.matchMedia("(max-width: 991px)").matches) {
+    document.querySelectorAll(".about-team").forEach(div => {
+        div.addEventListener('click', (event) => {
+
+            let idAbout = event.currentTarget.dataset.id;
+
+            document.querySelectorAll(".about-team-panel").forEach(panel => {
+             
+                if (panel.id == idAbout) {
+
+                    event.currentTarget.insertAdjacentElement("afterend", panel.closest(".about-team-panel-wrap"));
+                    panel.scrollIntoView({
+                        behavior: 'smooth',  // Cuộn mượt
+                        block: 'start'       // Cuộn để panel nằm trên cùng viewport
+                      });
+                
+                }
+            })
+        })
+    });
+}
