@@ -46,7 +46,7 @@
   --primary-color: #EC0C7E;
   --padding: 16px;
   --font-size-menu: 16px;
-
+  --color-background-contact: #FEFBF7;
   --color-background: #F6E3C8;
   --color-body: #FFFAF3;
   --color-text-white: #FFF6E9;
@@ -847,10 +847,17 @@ p.chucvu {
   font-family: "title-italic";
 }
 
-.services-banner img,
-.apply-support img {
-
+.services-banner  img {
   height: 235px;
+}
+
+.apply-support img {
+  height: 200px;
+}
+
+
+.apply-support img,
+.services-banner  img {
 
   object-fit: cover;
 
@@ -859,6 +866,9 @@ p.chucvu {
   border-radius: 16px;
 }
 
+.apply-support-1 img {
+  height: 269px;
+}
 .services-banner-content h4,
 .apply-support h4 {
   font-family: "text-bold";
@@ -907,6 +917,10 @@ p.chucvu {
 
 
 /************* CONTACT *******************/
+
+.contact-section {
+  background: var(--color-background-contact);
+}
 .contact-section h2 {
   font-size: 57px;
   font-family: "title-medium";
@@ -943,6 +957,17 @@ p.chucvu {
 }
 
 /************* END *******************/
+
+/************* CSS FORM EDIT *******************/
+
+.form-page-cover-image-wrapper {
+  display: none!important;
+}
+
+
+/************* END *******************/ 
+
+
 
 /*************RESPONSIVE *******************/
 
