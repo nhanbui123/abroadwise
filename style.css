@@ -936,12 +936,16 @@ p.chucvu {
   }
 }
 
-@media(max-width:768px) {
+@media(max-width:992px){
 
   /************* TRANG CHU *******************/
   .hero-img {
     border: none;
   }
+
+  .hero-img img {
+    margin-bottom: 2rem;
+}
 
   .py-4 {
     padding-top: 2rem !important;
@@ -1029,6 +1033,7 @@ p.chucvu {
   .footer-menu h4:last-child {
     margin-bottom: 0;
   }
+
 
   /************* END *******************/
 
@@ -1180,4 +1185,11 @@ p.chucvu {
   body.no-scroll {
     overflow: hidden;
   }
+}
+
+
+@media(max-width:768px){
+  .hero-img img {
+    margin-bottom: 0;
+}    
 }
