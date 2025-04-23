@@ -1,63 +1,81 @@
-console.log("hello");
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("hello");
 
-// Xử lý click team member
-function handleTeamClick(event) {
-    document.querySelectorAll(".about-team").forEach(item => item.classList.remove("active"));
-    event.currentTarget.classList.add("active");
-    let idAbout = event.currentTarget.dataset.id;
+    // Lưu trữ HTML ban đầu của container
+    const teamContainer = document.querySelector(".wrap-about-team");
+    let originalHTML = teamContainer.innerHTML;
 
-    document.querySelectorAll(".about-team-panel").forEach(panel => {
-        panel.classList.remove("active");
-        if (panel.id == idAbout) {
-            panel.classList.add("active");
-            
-            // Nếu là mobile thì thực hiện scroll
-            if (window.matchMedia("(max-width: 991px)").matches) {
-                event.currentTarget.insertAdjacentElement("afterend", panel.closest(".about-team-panel-wrap"));
-                panel.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+    // Xử lý click team member
+    function handleTeamClick(event) {
+        document.querySelectorAll(".about-team").forEach(item => item.classList.remove("active"));
+        event.currentTarget.classList.add("active");
+        let idAbout = event.currentTarget.dataset.id;
+
+        document.querySelectorAll(".about-team-panel").forEach(panel => {
+            panel.classList.remove("active");
+            if (panel.id == idAbout) {
+                panel.classList.add("active");
+                
+                if (window.matchMedia("(max-width: 991px)").matches) {
+                    event.currentTarget.insertAdjacentElement("afterend", panel.closest(".about-team-panel-wrap"));
+                    panel.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             }
-        }
-    });
-}
-
-// Gán sự kiện click cho team member
-document.querySelectorAll(".about-team").forEach(div => {
-    div.addEventListener('click', handleTeamClick);
-});
-
-// Xử lý menu mobile
-const btnMenu = document.querySelector(".menu-mobi-icon");
-const mobiMenu = document.querySelector(".menu-mobile");
-console.log(btnMenu);
-btnMenu.addEventListener("click", function () {
-    mobiMenu.classList.toggle("active");
-    const icon = this.querySelector("i");
-    icon.classList.toggle("fa-bars");
-    icon.classList.toggle("fa-xmark");
-    document.body.classList.toggle("no-scroll");
-});
-
-// Hàm kiểm tra và xử lý responsive
-function handleResponsive() {
-    if (window.matchMedia("(max-width: 991px)").matches) {
-        // Logic dành cho mobile
-        console.log("Mobile mode");
-    } else {
-        // Logic dành cho desktop
-        console.log("Desktop mode");
-        
-        // Reset các panel về vị trí ban đầu nếu cần
-        document.querySelectorAll(".about-team-panel-wrap").forEach(wrap => {
-            document.querySelector(".about-team-container").appendChild(wrap);
         });
     }
-}
 
-// Gán sự kiện resize
-window.addEventListener('resize', handleResponsive);
+    // Xử lý menu mobile
+    const btnMenu = document.querySelector(".menu-mobi-icon");
+    const mobiMenu = document.querySelector(".menu-mobile");
+    btnMenu.addEventListener("click", function() {
+        mobiMenu.classList.toggle("active");
+        const icon = this.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+        document.body.classList.toggle("no-scroll");
+    });
 
-// Chạy lần đầu khi tải trang
-handleResponsive();
+    // Hàm reset về trạng thái ban đầu
+    function resetToOriginalState() {
+        // Khôi phục HTML ban đầu
+        teamContainer.innerHTML = originalHTML;
+        
+        // Gán lại sự kiện click sau khi reset
+        document.querySelectorAll(".about-team").forEach(div => {
+            div.addEventListener('click', handleTeamClick);
+        });
+        
+        // Đóng menu mobile
+        if (mobiMenu) {
+            mobiMenu.classList.remove("active");
+            document.body.classList.remove("no-scroll");
+            const icon = btnMenu.querySelector("i");
+            if (icon) {
+                icon.classList.add("fa-bars");
+                icon.classList.remove("fa-xmark");
+            }
+        }
+    }
+
+    // Hàm kiểm tra responsive
+    function handleResponsive() {
+        if (window.matchMedia("(max-width: 991px)").matches) {
+            console.log("Mobile mode");
+        } else {
+            console.log("Desktop mode - Resetting to original state");
+            resetToOriginalState();
+        }
+    }
+
+    // Gán sự kiện
+    window.addEventListener('resize', handleResponsive);
+    document.querySelectorAll(".about-team").forEach(div => {
+        div.addEventListener('click', handleTeamClick);
+    });
+
+    // Chạy lần đầu
+    handleResponsive();
+});
