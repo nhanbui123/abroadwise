@@ -300,10 +300,10 @@ h2 {
 }
 
 .trips-card-content {
-  min-height: 315px;
+  min-height: 282px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 
@@ -559,7 +559,9 @@ footer button.btn:hover {
   color: var(--color-text-white);
   background-color: var(--primary-color);
 }
-
+.footer-menu {
+  max-width: 160px;
+}
 .contact-section .form-control,
 .contact-section .form-select {
   color: var(--color-text-white);
@@ -859,11 +861,13 @@ p.chucvu {
 .apply-support img,
 .services-banner  img {
 
-  object-fit: cover;
+object-fit: cover;
 
-  width: 100%;
+width: 100%;
 
-  border-radius: 16px;
+border-radius: 16px;
+
+height: 269px;
 }
 
 .apply-support-1 img {
@@ -902,10 +906,26 @@ p.chucvu {
 }
 
 .not-found-section {
-  background-image: url(image/banner-bottom-service.png);
+  background: #FFDCE6;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 88px 0;
+  max-height: 284px;
+  padding: 48px 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.not-found-section div {
+    z-index: 1;
+    position: relative;
+}
+
+section.not-found-section .w {
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+    z-index: 0;
 }
 
 .not-found-section h2 {
