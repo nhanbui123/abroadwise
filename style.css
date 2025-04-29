@@ -46,8 +46,8 @@
   --primary-color: #EC0C7E;
   --padding: 16px;
   --font-size-menu: 16px;
-  --color-background-contact: #FEFBF7;
-  --color-background: #F6E3C8;
+  --color-background: #FEFBF7;
+  --color-padding:#F6E3C8;
   --color-body: #FFFAF3;
   --color-text-white: #FFF6E9;
 
@@ -219,11 +219,13 @@ h2 {
   border-left: 0;
   border-bottom: solid var(--color-body) 0;
   border-top: 0;
+  height: 100%;
 }
 
 .hero-img img {
   border-radius: 16px;
   width: 100%;
+  height: 100%;
 }
 
 .hero h2 {
@@ -248,7 +250,7 @@ h2 {
 
 /******* TRIPS *****/
 .trips .container {
-  background: var(--color-background);
+  background: var( --color-padding);
   border-radius: 32px;
   padding: 72px;
 }
@@ -300,7 +302,7 @@ h2 {
 }
 
 .trips-card-content {
-  min-height: 282px;
+  min-height: 321px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -420,7 +422,7 @@ h2 {
 /* CSS STUDENT  */
 
 .student .container {
-  background: var(--color-background);
+  background: var( --color-padding);
   border-radius: 32px;
   margin-bottom: 80px;
 }
@@ -605,6 +607,9 @@ footer button.btn:hover {
 
 /********************* ABOUTS *****************/
 
+.values {
+  background: var(--color-background);
+}
 .values h1 {
   font-size: 48px;
 }
@@ -879,7 +884,7 @@ height: 269px;
 }
 
 .service-banner-content-bottom {
-  background: var(--color-background);
+  background: var( --color-padding);
   border-radius: 16px;
 }
 
@@ -1163,7 +1168,7 @@ min-height: 200px;
   }
 
   .about-team-panel {
-    flex-direction: column;
+
     padding: 1rem;
     padding-top: 2rem;
     position: unset;
@@ -1171,13 +1176,12 @@ min-height: 200px;
 
   .about-team-panel-img {
     width: 100%;
-    height: 270px;
+    height: 100%;
     margin-bottom: 1rem;
   }
 
   .about-team-panel-img img {
     object-position: top;
-
   }
 
   .about-team-panel-content blockquote {
@@ -1192,6 +1196,10 @@ min-height: 200px;
     padding: 0;
     padding-bottom: 1.5rem;
     padding-left: 1.5rem;
+  }
+
+  .about-team-panel-wrap .container {
+    margin-bottom: 2rem;
   }
 
   /************* END *******************/
@@ -1301,4 +1309,17 @@ min-height: 200px;
    .about-team-panel-wrap .container {
     margin-bottom: 1.5rem;
    }
+   .about-team-panel {
+    flex-direction: column;
+   }
+
+   .about-team-panel-img {
+    height: 400px;
+  }
 }
+
+@media(max-width:480px) {
+  .about-team-panel-img {
+    height: 256px;
+  }
+ }
