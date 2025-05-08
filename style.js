@@ -1,5 +1,17 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     console.log("hello");
+
+
+    // Xử lý menu mobile
+    const btnMenu = document.querySelector(".menu-mobi-icon");
+    const mobiMenu = document.querySelector(".menu-mobile");
+    btnMenu.addEventListener("click", function () {
+        mobiMenu.classList.toggle("active");
+        const icon = this.querySelector("i");
+        icon.classList.toggle("fa-bars");
+        icon.classList.toggle("fa-xmark");
+        document.body.classList.toggle("no-scroll");
+    });
 
     // Lưu trữ HTML ban đầu của container
     const teamContainer = document.querySelector(".wrap-about-team");
@@ -15,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             panel.classList.remove("active");
             if (panel.id == idAbout) {
                 panel.classList.add("active");
-                
+
                 if (window.matchMedia("(max-width: 991px)").matches) {
                     event.currentTarget.insertAdjacentElement("afterend", panel.closest(".about-team-panel-wrap"));
                     panel.scrollIntoView({
@@ -27,27 +39,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Xử lý menu mobile
-    const btnMenu = document.querySelector(".menu-mobi-icon");
-    const mobiMenu = document.querySelector(".menu-mobile");
-    btnMenu.addEventListener("click", function() {
-        mobiMenu.classList.toggle("active");
-        const icon = this.querySelector("i");
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-xmark");
-        document.body.classList.toggle("no-scroll");
-    });
+
 
     // Hàm reset về trạng thái ban đầu
     function resetToOriginalState() {
         // Khôi phục HTML ban đầu
         teamContainer.innerHTML = originalHTML;
-        
+
         // Gán lại sự kiện click sau khi reset
         document.querySelectorAll(".about-team").forEach(div => {
             div.addEventListener('click', handleTeamClick);
         });
-        
+
         // Đóng menu mobile
         if (mobiMenu) {
             mobiMenu.classList.remove("active");

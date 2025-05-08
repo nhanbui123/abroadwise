@@ -13,25 +13,29 @@
 
 <body>
 
-  <nav class="menu-header py-3 border-bottom border-danger mb-lg-5 mb-3">
+  <nav class="menu-header py-3 border-bottom border-danger ">
     <div class="container px-lg-5 px-xl-0 px-4">
       <div class="row align-items-center">
 
         <!-- Cột 1: Menu -->
         <div class="col-md-4  d-none d-lg-flex col-md-4">
-          <ul class="menu">
-            <li class="menu-item">
-              <a class="menu-link text-black" href="abouts.html">Về chúng tôi</a>
-            </li>
-            <li class="nav-item">
-              <a class="menu-link text-black" href="services.html">Chương trình & Dịch vụ</a>
-            </li>
-          </ul>
+          <div class="menu-menu-header-container">
+            <ul id="menu-menu-header" class="menu">
+              <li id="menu-item-21"
+                class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-21">
+                <a href="abouts.html" aria-current="page">Về Chúng Tôi</a></li>
+              <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a
+                  href="services.html">Chương Trình &amp; Dịch Vụ</a></li>
+              <li id="menu-item-22" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a
+                  href="contact.html">Liên hệ</a></li>
+            </ul>
+          </div>
         </div>
 
         <!-- Cột 2: Logo -->
         <div class="col-lg-4 col-6 text-lg-center text-left">
-          <a class="logo" href="index.html"><img src="image/primary-logo.png" alt=""></a>
+          <a class="logo" href="index.html"> <img class="logo" href="index.html"
+              src="image/primary-logo.png" alt=""> </a>
         </div>
 
         <!-- Cột 3: Nút Contact -->
@@ -47,134 +51,168 @@
       </div>
     </div>
   </nav>
+  <section class="menu-mobile py-5 align-items-center flex-column ">
+    <div class="menu-menu-header-container">
+      <ul id="menu-menu-header-1" class="menu">
+        <li
+          class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-8 current_page_item menu-item-21">
+          <a href="abouts.html">Về Chúng Tôi</a>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19"><a href="services.html">Chương
+            Trình & Dịch Vụ</a>
+        <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-22"><a href="contact.html"
+            class="btn btn-danger rounded-pill px-4">Liên hệ</a></li>
+      </ul>
+    </div>
+    <div class="find-us">
+      <p>Find us on social media</p>
+      <div class="d-flex justify-content-center gap-4 fs-3">
+        <a target="_blank" href=" https://www.instagram.com/abroadwise.vn/" class="text-dark">
+          <img src="https://duhocabroadwise.vn/wp-content/themes/aboardwise/assets/images/ins-contact.png" alt="">
+        </a>
+        <a target="_blank" href=" https://www.facebook.com/duhocabroadwise" class="text-dark">
+          <img src="https://duhocabroadwise.vn/wp-content/themes/aboardwise/assets/images/fb-contact.png" alt="">
+        </a>
+        <a target="_blank"
+          href=" https://www.linkedin.com/company/du-h%E1%BB%8Dc-ch%C3%A2u-%C3%A2u-abroadwise/?viewAsMember=true"
+          class="text-dark">
+          <img src="https://duhocabroadwise.vn/wp-content/themes/aboardwise/assets/images/linked-contact.png" alt="">
+        </a>
+        <a target="_blank"
+          href="https://www.tiktok.com/@abroadwise?fbclid=IwY2xjawKBxhBleHRuA2FlbQIxMABicmlkETFFa0haalhiWGpFMVBPdUtnAR7ZRpLhtIYbGWMvxDM_9VUlHv1vIg-huMR0DF6XSzveMRO65XZKYMMjLb7Vxw_aem_JnGs_65WBQbDYI7s_GuOBg"
+          class="text-dark">
+          <img src="https://duhocabroadwise.vn/wp-content/themes/aboardwise/assets/images/tiktok-contact.png" alt="">
+        </a>
 
-  <section class="py-5 pt-0 services">
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="py-lg-5 py-4 services-section">
     <div class="container px-4 px-lg-5 px-xl-0">
       <div class="text-center mb-5">
         <h2 class="text-black mb-4">Chương trình và Dịch vụ</h2>
         <h4 class="text-black">Lựa chọn chương trình phù hợp với bạn nhất!</h4>
       </div>
 
-      <div class="row services-banner align-items-end g-4 mb-lg-4 mb-2">
-        <!-- Hình ảnh -->
-        <div class="col-md-6">
-          <img src="image/service1.png" alt="EU Mentoring">
-        </div>
+      <div class="services-banner">
+        <div class="services-block">
+          <div class="services">
 
-        <!-- Nội dung -->
-        <div class="col-md-6 services-banner-content">
-          <h3 class="text-black mb-3">EU Mentoring</h3>
-          <h4 class="text-black mb-3">Dành cho ai:</h4>
-          <p class="text-black mb-0">
-            Những bạn đang ấp ủ ước mơ du học và săn học bổng Châu Âu nhưng còn băn khoăn không biết bắt đầu
-            từ đâu,
-            lựa chọn chương trình học, ngành học, trường ra sao, hoang mang giữa quá nhiều nguồn thông tin
-            học bổng,
-            không biết ứng tuyển bên nào là phù hợp năng lực, hoặc tự hỏi liệu mình có đủ khả năng để du
-            học.
-          </p>
-        </div>
-      </div>
-
-      <!-- Khối thông tin màu cam nhạt -->
-      <div class="p-lg-5 p-4 service-banner-content-bottom">
-        <h4 class="text-black mb-3">Đặc điểm chương trình:</h4>
-        <p class="text-black">
-          Chương trình huấn luyện chuyên sâu giúp bạn xây dựng một bộ hồ sơ nổi bật và xác định rõ lộ trình du
-          học phù hợp, bền vững.
-          Phương pháp huấn luyện dựa trên 3 trụ cột: lấy người học làm trung tâm – mục tiêu du học bền vững –
-          tin vào sự chuyển hóa
-          của cá nhân qua hành trình học tập toàn cầu.
-        </p>
-        <p class="text-black">
-          Bạn sẽ được mentor giàu kinh nghiệm đồng hành từ A-Z: từ lên kế hoạch và chiến lược chọn trường,
-          chuẩn bị hồ sơ,
-          khi nhận thư mời và xin visa/thẻ cư trú, đến khi bạn hoàn tất thủ tục nhập học và bắt đầu cuộc sống
-          mới nơi quốc gia mơ ước.
-          Ngoài ra, trong suốt quá trình huấn luyện bạn còn có cơ hội tham gia các buổi 1-1/nhóm nhỏ với cựu
-          du học sinh để chia sẻ và
-          trao đổi thêm các kinh nghiệm học tập và sống thực tế, và đặc biệt là được huấn luyện kỹ năng tìm
-          việc sau tốt nghiệp với
-          các mentor đã thành công ở lại làm việc tại Châu Âu (chỉ có ở EU Mentoring).
-        </p>
-        <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
-          Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section: Hỗ trợ hồ sơ ứng tuyển -->
-  <section class="apply-support mb-5 px-lg-5 px-xl-0 px-4">
-    <div class="container">
-      <div class="row align-items-end flex-column-reverse flex-lg-row">
-        <div class="col-lg-7">
-          <h3 class=" text-black mb-3">Hỗ trợ thành tố hồ sơ ứng tuyển và học bổng Châu Âu</h2>
-            <h4 class="text-black mb-3">Dành cho ai:</h4>
-            <p class="text-black mb-0">
-              Những bạn đã xác định được ngành học, trường và quốc gia muốn nộp hồ sơ,
-              nhưng cần hoàn thiện các tài liệu hồ sơ quan trọng gồm: CV, thư động lực, thư giới thiệu.
+            <div class="services-image">
+              <img src="image/service1.png" alt="EU Mentoring">
+            </div>
+            <div class="services-content">
+              <h3 class="text-black mb-3">EU Mentoring</h3>
+              <h4 class="text-black mb-3">Dành cho ai:</h4>
+              <p class="text-black mb-0">
+                Những bạn đang ấp ủ ước mơ du học và săn học bổng Châu Âu nhưng còn băn khoăn không biết bắt đầu
+                từ đâu,
+                lựa chọn chương trình học, ngành học, trường ra sao, hoang mang giữa quá nhiều nguồn thông tin
+                học bổng,
+                không biết ứng tuyển bên nào là phù hợp năng lực, hoặc tự hỏi liệu mình có đủ khả năng để du
+                học.
+              </p>
+            </div>
+          </div>
+          <div class="services-content-bottom">
+            <h4 class="text-black mb-3">Đặc điểm chương trình:</h4>
+            <p class="text-black">
+              Chương trình huấn luyện chuyên sâu giúp bạn xây dựng một bộ hồ sơ nổi bật và xác định rõ lộ trình du
+              học phù hợp, bền vững.
+              Phương pháp huấn luyện dựa trên 3 trụ cột: lấy người học làm trung tâm – mục tiêu du học bền vững –
+              tin vào sự chuyển hóa
+              của cá nhân qua hành trình học tập toàn cầu.
             </p>
-        </div>
-        <div class="col-lg-5 text-center mb-3 mb-lg-0">
-          <img src="image/services2.png" alt="Hỗ trợ hồ sơ">
-        </div>
-      </div>
-
-      <!-- Section: Đặc điểm chương trình -->
-      <div class="mt-2 mt-lg-4 p-4 p-lg-5 dacdiem">
-        <h4 class="text-black mb-3">Đặc điểm chương trình:</h5>
-          <p class="mb-4 text-body">
-            Mentor của AbroadWise sẽ đồng hành cùng bạn để hoàn thiện các phần còn thiếu trong hồ sơ theo
-            yêu
-            cầu một cách chỉn chu,
-            đồng bộ và logic với ngành học, trường và mục tiêu bạn đã chọn – giúp bạn thể hiện rõ năng lực,
-            định
-            hướng và tiềm năng
-            phù hợp với chương trình ứng tuyển.
-          </p>
-          <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
-            Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
-          </a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Section: Hỗ trợ hồ sơ ứng tuyển -->
-  <section class="apply-support apply-support-1 mb-5">
-    <div class="container px-4 px-lg-5 px-xl-0">
-      <div class="row align-items-end">
-        <div class="col-lg-5 text-center mb-3 mb-lg-0">
-          <img src="image/service3.png" alt="Hỗ trợ hồ sơ">
-        </div>
-        <div class="col-lg-7">
-          <h3 class=" text-black mb-3">Xin visa & thị thực du học Châu Âu </h2>
-            <h4 class="text-black mb-3">Dành cho ai:</h4>
-            <p class="text-black mb-0">
-              Những bạn đã nhận được thư mời nhập học và đang cần hỗ trợ trong quá trình xin visa hoặc thẻ
-              cư trú (không biết nên xin visa hay thẻ cư trú, không chắc chắn về danh sách giấy tờ cần
-              chuẩn bị theo yêu cầu của Đại sứ quán hoặc Tổng lãnh sự quán, không có thời gian để nghiên
-              cứu và xử lý hồ sơ một cách chính xác) 
+            <p class="text-black">
+              Bạn sẽ được mentor giàu kinh nghiệm đồng hành từ A-Z: từ lên kế hoạch và chiến lược chọn trường,
+              chuẩn bị hồ sơ,
+              khi nhận thư mời và xin visa/thẻ cư trú, đến khi bạn hoàn tất thủ tục nhập học và bắt đầu cuộc sống
+              mới nơi quốc gia mơ ước.
+              Ngoài ra, trong suốt quá trình huấn luyện bạn còn có cơ hội tham gia các buổi 1-1/nhóm nhỏ với cựu
+              du học sinh để chia sẻ và
+              trao đổi thêm các kinh nghiệm học tập và sống thực tế, và đặc biệt là được huấn luyện kỹ năng tìm
+              việc sau tốt nghiệp với
+              các mentor đã thành công ở lại làm việc tại Châu Âu (chỉ có ở EU Mentoring).
             </p>
+            <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
+              Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
+            </a>
+
+          </div>
         </div>
-      </div>
+        <div class="services-block">
+          <div class="services">
 
-      <!-- Section: Đặc điểm chương trình -->
-      <div class="mt-lg-4 mt-2 p-4 p-md-5 dacdiem dacdiem2">
-        <h4 class="text-black mb-3">Đặc điểm chương trình:</h5>
-          <p class="mb-4 text-body">
-            Dịch vụ trọn gói hỗ trợ bạn xác định loại giấy tờ thông hành phù hợp, chuẩn bị giấy tờ đúng yêu cầu từ Đại
-            sứ quán/Tổng lãnh sự quán, rà soát hồ sơ kỹ lưỡng và tối ưu hóa quy trình nộp – giúp bạn tiết kiệm thời
-            gian, giảm áp lực và nâng cao tỷ lệ đậu visa/thẻ cư trú.
+            <div class="services-image">
+              <img src="image/services2.png" alt="Hỗ trợ hồ sơ">
+            </div>
+            <div class="services-content">
+              <h3 class="text-black mb-3">EU Mentoring</h3>
+              <h4 class="text-black mb-3">Dành cho ai:</h4>
+              <p class="text-black mb-0">
+                Những bạn đang ấp ủ ước mơ du học và săn học bổng Châu Âu nhưng còn băn khoăn không biết bắt đầu
+                từ đâu,
+                lựa chọn chương trình học, ngành học, trường ra sao, hoang mang giữa quá nhiều nguồn thông tin
+                học bổng,
+                không biết ứng tuyển bên nào là phù hợp năng lực, hoặc tự hỏi liệu mình có đủ khả năng để du
+                học.
+              </p>
+            </div>
+          </div>
+          <div class="services-content-bottom">
+            <h4 class="text-black mb-3">Đặc điểm chương trình:</h5>
+              <p class="mb-4 text-body">
+                Mentor của AbroadWise sẽ đồng hành cùng bạn để hoàn thiện các phần còn thiếu trong hồ sơ theo
+                yêu
+                cầu một cách chỉn chu,
+                đồng bộ và logic với ngành học, trường và mục tiêu bạn đã chọn – giúp bạn thể hiện rõ năng lực,
+                định
+                hướng và tiềm năng
+                phù hợp với chương trình ứng tuyển.
+              </p>
+              <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
+                Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
+              </a>
+          </div>
+        </div>
+        <div class="services-block">
+          <div class="services">
 
-          </p>
-          <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
-            Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
-          </a>
+            <div class="services-image">
+              <img src="image/service3.png" alt="Hỗ trợ hồ sơ">
+            </div>
+            <div class="services-content">
+              <h3 class=" text-black mb-3">Xin visa & thị thực du học Châu Âu </h2>
+                <h4 class="text-black mb-3">Dành cho ai:</h4>
+                <p class="text-black mb-0">
+                  Những bạn đã nhận được thư mời nhập học và đang cần hỗ trợ trong quá trình xin visa hoặc thẻ
+                  cư trú (không biết nên xin visa hay thẻ cư trú, không chắc chắn về danh sách giấy tờ cần
+                  chuẩn bị theo yêu cầu của Đại sứ quán hoặc Tổng lãnh sự quán, không có thời gian để nghiên
+                  cứu và xử lý hồ sơ một cách chính xác) 
+                </p>
+            </div>
+          </div>
+          <div class="services-content-bottom">
+            <h4 class="text-black mb-3">Đặc điểm chương trình:</h5>
+              <p class="mb-4 text-body">
+                Dịch vụ trọn gói hỗ trợ bạn xác định loại giấy tờ thông hành phù hợp, chuẩn bị giấy tờ đúng yêu cầu từ
+                Đại
+                sứ quán/Tổng lãnh sự quán, rà soát hồ sơ kỹ lưỡng và tối ưu hóa quy trình nộp – giúp bạn tiết kiệm thời
+                gian, giảm áp lực và nâng cao tỷ lệ đậu visa/thẻ cư trú.
+
+              </p>
+              <a href="#eu-mentoring-register" class="btn btn-cta mt-3 text-black">
+                Đăng ký và tìm hiểu thêm <i class="fa-solid fa-arrow-right ms-3" style="font-size: 21px;"></i></a>
+              </a>
+
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
 
 
   <!-- Section: Gợi ý Liên hệ -->
@@ -188,23 +226,7 @@
       </a>
     </div>
   </section>
-  <section class="menu-mobile py-5 align-items-center flex-column">
-    <ul>
-      <li> <a href="abouts.html">Về Chúng Tôi</a></li>
-      <li><a href="services.html">Chương Trình & Dịch Vụ</a></li>
-      <li><a href="contact.html" class="btn btn-danger rounded-pill px-4">Liên hệ</a></li>
-    </ul>
 
-    <div class="find-us">
-      <p>Find us on social media</p>
-      <div class="d-flex justify-content-center gap-4 fs-3">
-        <a href="#" class="text-dark"><img src="image/fb-contact.png" alt=""></a>
-        <a href="#" class="text-dark"><img src="image/ins-contact.png" alt=""></a>
-        <a href="#" class="text-dark"><img src="image/linked-contact.png" alt=""></a>
-        <a href="#" class="text-dark"><img src="image/tiktok-contact.png" alt=""></a>
-      </div>
-    </div>
-  </section>
   <footer class="text-white py-lg-5 py-4">
     <div class="container px-lg-5 px-xl-0 px-4">
       <div class="row d-flex align-items-center">
