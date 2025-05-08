@@ -62,6 +62,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, footer-widge
   --color-background: #FEFBF7;
   --color-padding: #F6E3C8;
   --color-body: #FFFAF3;
+  --color-bg-story:#FAF5EE;
   --color-text-white: #FFF6E9;
 
   --color-text-primary: #1B2259;
@@ -586,7 +587,7 @@ img.logo {
 /****** END ********/
 
 
-/****** ADVISORY ********/
+/****** ABOUT ADVISORY ********/
 
 .advisory {
   background: var(--color-blue-bg)
@@ -654,6 +655,119 @@ img.logo {
   border-radius: 48px;
   border: 1px solid var(--color-text-white);
   padding: 8px 16px;
+}
+
+/****** END ********/
+
+/****** STORY ********/
+
+.story {
+  background: var(--color-bg-story);
+}
+.story .container {
+  height: 399px; margin-bottom: 40px;
+}
+
+
+.story h1 {
+  font-size: 40px;
+  font-family: "title";
+  color: var(--color-text-primary);
+}
+
+.story h2 {
+  font-size: 24px;
+  font-family: "title-italic";
+  color: var(--color-text-primary);
+}
+
+.story-items {
+  column-count: 2;
+  column-gap: 1rem;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.story-item {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 1rem;
+  break-inside: avoid;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 32px;
+  border-radius: 8px;
+}
+
+.story-item-content {
+  overflow: hidden;
+  color: var(--color-text-primary);
+}
+.story-item-content p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;       /* Giới hạn 3 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+.story-item-content.active p {
+  display: block;;
+}
+
+.story-item-infor {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-primary);
+}
+
+.story-item-infor-img {
+  width: 20%;
+  height: 100%;
+}
+
+.story-item-infor-content {
+  width: 78%;
+  color: var(--color-text-primary);
+}
+
+.story-item-infor-img img {
+  height: 86px;
+  width: 86px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.btn-expand-collapse {
+  display: flex;
+  align-items: center;
+  border-bottom: 1.6px solid var(--primary-color);
+  height: 28px;
+  width: 90px;
+  font-family: "text-bold";
+  font-size: 16px;
+  justify-content: space-between;
+}
+
+.btn-expand-collapse:hover {
+  cursor: pointer;
+  color: var(--primary-color);
+ }
+
+.btn-expand-collapse img {
+  height: 18px;
+  width: 18px;
+  margin-left: 5px;
+  object-fit: contain;
+}
+
+.btn-expand-collapse img {
+  display: none;
+}
+
+.btn-expand-collapse img.active {
+  display: block;
 }
 
 /****** END ********/

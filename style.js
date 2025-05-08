@@ -2,6 +2,58 @@ document.addEventListener('DOMContentLoaded', function () {
     console.log("hello");
 
 
+
+    //Xử lý btn-expand-collapse
+
+    const btnExpandCollapse = document.querySelectorAll(".btn-expand-collapse");
+
+    btnExpandCollapse.forEach(function (btn) {
+        btn.addEventListener("click", function () {
+
+            const spanBTN = this.querySelector("span");
+            if (spanBTN.innerText === "Expand") {
+                spanBTN.innerText = "Collapse";
+            } else {
+                spanBTN.innerText = "Expand";
+            }
+
+            const imgExpand = this.querySelector(".expandIcon");
+            const imgCollapse = this.querySelector(".collapseIcon");
+
+            imgCollapse.classList.toggle("active");
+            imgExpand.classList.toggle("active");
+
+            document.querySelectorAll(".btn-expand-collapse").forEach(item => {
+                if (item !== this) {
+                    item.querySelector(".collapseIcon").classList.remove("active");
+                    item.querySelector(".expandIcon").classList.add("active");
+                    item.querySelector("span").innerText = "Expand";
+                }
+            });
+
+            const parent = this.closest(".story-item");
+            const content = parent.querySelector(".story-item-content");
+
+            document.querySelectorAll(".story-item-content").forEach(item => {
+                if (item !== content) {
+                    item.classList.remove("active");
+                }
+            });
+
+            // Toggle phần nội dung
+            content.classList.toggle("active");
+
+            // 👉 Cuộn đến vị trí div đó
+            if (content.classList.contains("active")) {
+                parent.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+    });
+
+
     // Xử lý menu mobile
     const btnMenu = document.querySelector(".menu-mobi-icon");
     const mobiMenu = document.querySelector(".menu-mobile");
