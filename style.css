@@ -13,44 +13,38 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, footer-widge
 @font-face {
   font-family: 'text-bold';
   src: url('fonts/BeVietnamPro-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 @font-face {
   font-family: 'text-semiBold';
   src: url('fonts/BeVietnamPro-SemiBold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 @font-face {
   font-family: 'text-regular';
   src: url('fonts/BeVietnamPro-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 @font-face {
   font-family: 'title';
   src: url('fonts/Lora-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 @font-face {
   font-family: 'title-medium';
   src: url('fonts/Lora-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 
 @font-face {
   font-family: 'title-italic';
   src: url('fonts/Lora-Italic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+
 }
 
 
@@ -62,7 +56,7 @@ Tags: custom-background, custom-logo, custom-menu, featured-images, footer-widge
   --color-background: #FEFBF7;
   --color-padding: #F6E3C8;
   --color-body: #FFFAF3;
-  --color-bg-story:#FAF5EE;
+  --color-bg-story: #FAF5EE;
   --color-text-white: #FFF6E9;
 
   --color-text-primary: #1B2259;
@@ -664,8 +658,10 @@ img.logo {
 .story {
   background: var(--color-bg-story);
 }
+
 .story .container {
-  height: 399px; margin-bottom: 40px;
+  height: 399px;
+  margin-bottom: 40px;
 }
 
 
@@ -703,9 +699,11 @@ img.logo {
   overflow: hidden;
   color: var(--color-text-primary);
 }
+
 .story-item-content p {
   display: -webkit-box;
-  -webkit-line-clamp: 3;       /* Giới hạn 3 dòng */
+  -webkit-line-clamp: 3;
+  /* Giới hạn 3 dòng */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -713,7 +711,8 @@ img.logo {
 }
 
 .story-item-content.active p {
-  display: block;;
+  display: block;
+  ;
 }
 
 .story-item-infor {
@@ -753,7 +752,7 @@ img.logo {
 .btn-expand-collapse:hover {
   cursor: pointer;
   color: var(--primary-color);
- }
+}
 
 .btn-expand-collapse img {
   height: 18px;
@@ -768,6 +767,225 @@ img.logo {
 
 .btn-expand-collapse img.active {
   display: block;
+}
+
+/****** END ********/
+
+/****** BLOGS ********/
+
+.blogs-banner .container {
+  position: relative;
+  border-bottom: 1.7px solid var(--primary-color);
+}
+
+.blogs-banner-title h1 {
+  font-family: 'title-medium';
+  font-size: 48px;
+
+}
+
+.blogs-banner-title h3 {
+  font-family: 'text-regular';
+  font-size: 24px;
+
+}
+
+.bg-banner-blogs {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.blogs-banner-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 364px;
+}
+
+
+.blogs-banner-title {
+  width: 45%;
+}
+
+.blogs-banner-search {
+  width: 45%;
+}
+
+.blogs-banner-search .search-box {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  height: 40px;
+  border: 1px solid var(--color-text-primary);
+  align-items: center;
+  background: var(--color-background);
+  color: var(--color-text-primary);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blogs-banner-search .search-box span.search-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  color: var(--color-text-primary);
+}
+
+.blogs-banner-search .search-box span.right-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 100%;
+  color: var(--color-background);
+  background: var(--color-text-primary);
+}
+
+.blogs-banner-search .search-box input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+
+}
+
+.blogs-banner-search .search-box input:focus-visible,
+.blogs-banner-search .search-box input:focus {
+  outline: none;
+}
+
+.blogs-banner-search .search-box input::placeholder {
+  color: var(--color-text-primary);
+  font-family: 'text-regular';
+  font-size: 16px;
+}
+
+.blogs-tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogs-tab-title h3 {
+  font-family: 'title';
+  font-size: 40px;
+  margin-bottom: 0;
+}
+
+
+.blogs-tab-list,
+.blogs-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blogs-tab-list li,
+.blogs-list li {
+  font-family: 'text-regular';
+  font-size: 16px;
+  border-radius: 48px;
+  border: 1px solid var(--color-text-primary);
+  margin-right: 16px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+}
+
+.blogs-tab-list li.active {
+  color: var(--color-background) !important;
+  background: var(--primary-color) !important;
+  border: var(--primary-color) 1px solid !important;
+}
+
+.blogs-tab-list li:last-child {
+  margin-right: 0;
+}
+
+.post-thumbnail {
+  height: 300px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.blogs-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 4%;
+  row-gap: 48px;
+}
+
+.blogs-grid-item {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blogs-grid-item h4 {
+  font-family: 'title';
+  font-size: 32px;
+}
+
+.pagination-page-ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pagination-page-ul li {
+  background: var(--color-padding);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pagination-page-ul li a {
+  color: var(--color-text-primary);
+  font-family: 'text-regular';
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.pagination-page-ul li:last-child {
+  margin-right: 0;
+  background: none;
+}
+
+.pagination-page-ul li:first-child,
+.pagination-page-ul li.disabled {
+  background: none;
+}
+
+.pagination-page-ul li.active {
+  background: var(--color-text-primary);
+
+}
+
+.pagination-page-ul li.active a {
+
+  color: var(--color-background);
 }
 
 /****** END ********/
