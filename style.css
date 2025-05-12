@@ -98,8 +98,13 @@ body {
   font-family: 'text-regular'
 }
 
+* {
+  color: var(--color-text-primary);
+}
+
 a {
   font-family: 'text-bold';
+  text-decoration: none;
 }
 
 a.btn {
@@ -107,6 +112,7 @@ a.btn {
   display: inline-flex;
   align-items: center;
   height: 40px;
+  color: var(--color-text-white);
 }
 
 a.btn i {
@@ -115,14 +121,24 @@ a.btn i {
 
 a.btn i {
   font-size: 23px;
+  color: var(--color-text-white);
 }
-
-
 
 a.btn:hover {
   color: var(--primary-color);
-  background-color: #fff;
+  background-color: var(--color-text-white);
+  ;
   border: solid 1px var(--primary-color);
+}
+
+.trips-card a.btn:hover {
+  background-color: #fff;
+  color: var(--primary-color);
+  border: solid 1px var(--primary-color);
+}
+
+a.btn:hover i {
+  color: var(--primary-color);
 }
 
 
@@ -321,16 +337,19 @@ img.logo {
   max-width: 46%;
   margin-bottom: 0;
   margin: 0 auto;
+  color: var(--color-text-white);
 }
 
 .trips-card h2 {
   max-width: 100%;
+  color: var(--color-text-primary);
 }
 
 .trips h4 {
   font-family: 'title-italic';
   max-width: 80%;
   margin: 0 auto;
+  color: var(--color-text-white);
 }
 
 
@@ -622,6 +641,7 @@ img.logo {
 .advisory-content h5 {
   font-family: 'title-italic';
   font-size: 24px;
+  color: var(--color-text-white);
 }
 
 .advisory-content {
@@ -643,12 +663,14 @@ img.logo {
 .advisory-content p {
   font-family: 'text-regular';
   font-size: 14px;
+  color: var(--color-text-white);
 }
 
 .advisory-content-btn {
   border-radius: 48px;
   border: 1px solid var(--color-text-white);
   padding: 8px 16px;
+  color: var(--color-text-white);
 }
 
 /****** END ********/
@@ -845,6 +867,11 @@ img.logo {
   background: var(--color-text-primary);
 }
 
+.blogs-banner-search .search-box span.right-icon:hover {
+  background: var(--primary-color);
+  cursor: pointer;
+}
+
 .blogs-banner-search .search-box input {
   width: 100%;
   height: 100%;
@@ -885,18 +912,28 @@ img.logo {
   margin: 0;
 }
 
-.blogs-tab-list li,
-.blogs-list li {
+.blogs-tab-list li a,
+.blogs-list li a {
   font-family: 'text-regular';
   font-size: 16px;
   border-radius: 48px;
   border: 1px solid var(--color-text-primary);
   margin-right: 16px;
   padding: 8px 12px;
+  text-decoration: none;
   text-transform: uppercase;
+  color: var(--color-text-primary);
 }
 
-.blogs-tab-list li.active {
+.blogs-tab-list li a:hover,
+.blogs-list li a:hover {
+  background: var(--primary-color);
+  transition: all .3s;
+  color: var(--color-text-white);
+  border: 1px solid var(--primary-color);
+}
+
+.blogs-tab-list li.active a {
   color: var(--color-background) !important;
   background: var(--primary-color) !important;
   border: var(--primary-color) 1px solid !important;
@@ -920,6 +957,12 @@ img.logo {
   object-position: center;
 }
 
+.post-thumbnail img:hover {
+  transition: all .3s;
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
 .blogs-grid {
   display: flex;
   flex-wrap: wrap;
@@ -935,9 +978,15 @@ img.logo {
   justify-content: space-between;
 }
 
-.blogs-grid-item h4 {
+.blogs-grid-item h4 a {
   font-family: 'title';
   font-size: 32px;
+  color: var(--color-text-primary);
+}
+
+.blogs-grid-item h4:hover a {
+  color: var(--primary-color);
+  transition: all .3s;
 }
 
 .pagination-page-ul {
@@ -961,6 +1010,14 @@ img.logo {
 
 }
 
+.pagination-page-ul li:hover {
+  background: var(--color-text-primary);
+}
+
+.pagination-page-ul li:hover a {
+  color: var(--color-text-white);
+}
+
 .pagination-page-ul li a {
   color: var(--color-text-primary);
   font-family: 'text-regular';
@@ -976,6 +1033,11 @@ img.logo {
 .pagination-page-ul li:first-child,
 .pagination-page-ul li.disabled {
   background: none;
+}
+
+.pagination-page-ul li:first-child:hover a,
+.pagination-page-ul li:last-child:hover a {
+  color: var(--color-primary);
 }
 
 .pagination-page-ul li.active {
@@ -1028,6 +1090,7 @@ img.logo {
   margin: 0 auto;
   padding: 80px 0;
 }
+
 .blog-detail-content * {
   color: var(--color-text-primary);
 }
@@ -1062,11 +1125,23 @@ img.logo {
   width: 31%;
 }
 
-.blog-relative-item h4 {
+.blog-relative-item h4 a {
   font-family: 'title';
   font-size: 32px;
   margin-bottom: 1.5rem;
   color: var(--color-text-primary);
+  display: block;
+}
+
+.blog-relative-item h4 a:hover {
+  color: var(--color-primary);
+  transition: all .3s;
+}
+
+.blog-relative-item h4:hover {
+  color: var(--primary-color);
+  transition: all .3s;
+  cursor: pointer;
 }
 
 .blog-relative-item img {
@@ -1081,10 +1156,172 @@ img.logo {
   flex-wrap: wrap;
 }
 
-.blog-relative-item .blogs-list li {
+.blog-relative-item .blogs-list li a {
   margin-bottom: 8px;
+  display: block;
 }
 
+
+/****** END ********/
+
+/****** BOOKING AND ADVISE ********/
+.booking-advise .container {
+
+  max-width: 960px;
+}
+
+.booking-advise-title {
+  padding: 80px 0;
+  margin-bottom: 80px;
+  border-bottom: 1.7px solid var(--primary-color);
+}
+
+.booking-advise-title h1 {
+  font-size: 48px;
+  font-family: 'title-medium';
+  text-align: center;
+  margin-bottom: 2.5rem;
+
+}
+
+.booking-advise-title p {
+  font-family: 'text-regular';
+  font-size: 16px;
+  text-align: center;
+}
+
+.booking-advise-title p:last-child {
+  margin-bottom: 0;
+}
+
+.booking-advise-block-1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.booking-advise-block-1 .booking-advise-block-content {
+  width: 54%;
+}
+
+.booking-advise-block-1 .booking-advise-block-img {
+  width: 43%;
+}
+
+.booking-advise-block-1 .booking-advise-block-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.booking-advise-block-content h3 {
+  font-size: 32px;
+  font-family: 'title-regular';
+  margin-bottom: 32px;
+}
+
+.booking-advise-block-content p {
+  font-family: 'text-regular';
+  font-size: 16px;
+  margin-bottom: 2rem;
+}
+
+.booking-advise-block-content p:last-child {
+  margin-bottom: 0;
+}
+
+.booking-advise-block-1 {
+  margin-bottom: 80px;
+}
+
+.booking-advise-block-2 {
+  background: var(--color-blue-bg);
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+
+.booking-advise-block-2-title {
+  width: 35%;
+}
+
+.booking-advise-block-2-title h3 {
+  font-family: 'title-regular';
+  font-size: 32px;
+}
+
+.booking-advise-block-2-content {
+  width: 65%;
+  display: flex;
+  justify-content: end;
+}
+
+.booking-advise-block-2 ul li P {
+  color: var('--color-text-primary');
+}
+
+.booking-advise-block-3 h3 {
+  font-size: 16px;
+  font-family: 'text-bold';
+  text-transform: uppercase;
+}
+
+.booking-advise-block-3 {
+  margin-bottom: 80px;
+}
+
+.booking-advise-block-4 a.btn i {
+  font-size: 20px;
+}
+
+.booking-advise-block-4 a.btn span {
+  color: var(--color-text-white);
+}
+
+.booking-advise-block-4 a.btn:hover span {
+    color: var(--color-primary);
+}
+
+.booking-advise-block-4 {
+  background: var(--color-pink);
+  padding: 40px;
+  border-radius: 1rem;
+  margin-bottom: 80px;
+}
+
+.booking-advise-block-4-content p:first-child {
+  font-family: 'text-regular';
+  text-transform: uppercase;
+}
+
+.booking-advise-block-5 {
+  margin-bottom: 80px;
+}
+.not-found-section.advise-end {
+  max-height: 425px;
+}
+.not-found-section.advise-end .btn span {
+  color: var(--color-text-white);
+}
+.not-found-section.advise-end .btn:hover span {
+  color: var(--color-primary);
+}
+.not-found-section.advise-end h4 {
+  font-family: 'title-italic';
+  font-size: 24px;
+  max-width: 68%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+.not-found-section.advise-end p {
+  max-width: 68%;
+  margin: 0 auto ;
+  margin-bottom: 1rem;
+}
 /****** END ********/
 
 /****** FOOTER ********/
@@ -1165,7 +1402,6 @@ footer button.btn:hover {
 /****** END ********/
 .btn-cta {
   background-color: var(--color-text-primary);
-  color: white;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
 }
@@ -1182,10 +1418,16 @@ footer button.btn:hover {
 
 .btn span {
   transition: transform 0.3s ease;
+  color: var(--color-text-primary);
+}
+
+.hero .btn span {
+  color: var(--color-text-white);
 }
 
 .btn:hover span {
   transform: translateX(5px);
+  color: var(--color-primary);
 }
 
 .bg-footer {
