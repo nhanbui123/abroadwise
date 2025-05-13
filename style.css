@@ -324,7 +324,7 @@ img.logo {
   content: "";
   height: 35px;
   width: 35px;
-  background: url('assets/images/icon-logo.png');
+  background: url('image/icon-logo.png');
   background-repeat: no-repeat;
   background-size: cover;
   top: -30px;
@@ -2537,6 +2537,7 @@ section.not-found-section .w {
     display: block;
     text-align: center;
   }
+
   .booking-advise-block-4 {
     padding: 2rem;
     margin-bottom: 2rem;
@@ -2559,20 +2560,33 @@ section.not-found-section .w {
   .booking-advise-block-2-content ul li {
     text-align: left;
   }
+
   .booking-advise-block-3 {
     margin-bottom: 32px;
   }
+
   .not-found-section.advise-end {
     max-height: fit-content;
     padding: 32px;
   }
+
   .not-found-section.advise-end h4 {
     max-width: 100%;
   }
 
-.not-found-section.advise-end p {
+  .not-found-section.advise-end p {
     max-width: 100%;
-}
+  }
+  .advisory {
+    padding:1.5rem
+  }
+  .advisory .container {
+    border-radius: 24px;
+  }
+
+  .advisory-content {
+    margin-bottom: 1.5rem;
+  }
 }
 
 @media(max-width:480px) {
