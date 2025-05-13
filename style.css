@@ -1438,15 +1438,14 @@ footer button.btn:hover {
 }
 
 .footer-menu {
-  max-width: 160px;
 }
 
 .footer-menu h4 a {
   color: var(--color-text-white);
   display: block;
   margin-bottom: .5rem;
-  font-size: 22px;
-  font-family: 'text-semiBold';
+  font-size: 20px;
+  font-family: 'text-bold';
 }
 
 .footer-menu h4 a:hover {
